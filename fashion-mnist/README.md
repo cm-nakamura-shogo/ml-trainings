@@ -17,6 +17,7 @@
   - kerasではdense層が全結合層である。
 
 - ほぼほぼ、kerasの公式実装通りである。
+  - [https://www.tensorflow.org/tutorials/keras/classification](https://www.tensorflow.org/tutorials/keras/classification)
 
 - 以下は追加している。
   - trainをtrainとvalidに分割する。
