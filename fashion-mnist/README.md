@@ -8,7 +8,9 @@
 |exp002|tr_loss=0.1428, tr_acc=0.9480<br>vd_loss=0.2434, vd_acc=0.9142<br>tt_loss=0.2675, tt_acc=0.9047|exp001|convモデル化|
 |exp003|tr_loss=0.1789, tr_acc=0.9338<br>vd_loss=0.2620, vd_acc=0.9030<br>tt_loss=0.2749, tt_acc=0.9000|exp002|BN導入。層数が少ない場合は効果は低いか？|
 |exp004|tr_loss=0.1402, tr_acc=0.9508<br>vd_loss=0.2006, vd_acc=0.9280<br>tt_loss=0.2088, tt_acc=0.9244|exp002|convを多層化。|
-|exp005|tr_loss=0.1301, tr_acc=0.9532<br>vd_loss=0.2076, vd_acc=0.9299<br>tt_loss=0.2257, tt_acc=0.9220|exp004|colab対応。|
+|exp005|tr_loss=0.1701, tr_acc=0.9366<br>vd_loss=0.2045, vd_acc=0.9251<br>tt_loss=0.2262, tt_acc=0.9181|exp004|colab対応。|
+|exp006|tr_loss=0.1048, tr_acc=0.9615<br>vd_loss=0.2021, vd_acc=0.9322<br>tt_loss=0.2086, tt_acc=0.9266|exp005|data augmentationでzoom_rangeを有効化|
+|exp007|tr_loss=0.1224, tr_acc=0.9591<br>vd_loss=0.1897, vd_acc=0.9348<br>tt_loss=0.2024, tt_acc=0.9328|exp006|mixup|
 
 ## 実装説明
 
@@ -49,6 +51,23 @@
   - EfficientNet的には、同時にスケールさせた方が良いはず。
 
 - ついでに後段のDenseを削除して、Global Average Poolingにより、FCN(Fully Convolutional Network)構成にした。
+
+### exp005-colab
+
+- colab実行に対応。
+  
+### exp006-data-augmentation
+
+- データ拡張を実装。kerasの`ImageDataGenerator`を使用。
+  - https://keras.io/ja/preprocessing/image/
+
+- 効果があったのは、`zoom_range`のみであったため、こちらのみ有効化
+
+### exp007-mixup
+
+- データ拡張としてmixupを導入。
+
+- `ImageDataGenerator`に未実装であったため、継承して実装。
 
 ## 考察メモと改善案
 
