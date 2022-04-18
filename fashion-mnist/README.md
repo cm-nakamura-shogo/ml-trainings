@@ -8,6 +8,7 @@
 |exp002|tr_loss=0.1428, tr_acc=0.9480<br>vd_loss=0.2434, vd_acc=0.9142<br>tt_loss=0.2675, tt_acc=0.9047|exp001|convモデル化|
 |exp003|tr_loss=0.1789, tr_acc=0.9338<br>vd_loss=0.2620, vd_acc=0.9030<br>tt_loss=0.2749, tt_acc=0.9000|exp002|BN導入。層数が少ない場合は効果は低いか？|
 |exp004|tr_loss=0.1402, tr_acc=0.9508<br>vd_loss=0.2006, vd_acc=0.9280<br>tt_loss=0.2088, tt_acc=0.9244|exp002|convを多層化。|
+|exp005|tr_loss=0.1301, tr_acc=0.9532<br>vd_loss=0.2076, vd_acc=0.9299<br>tt_loss=0.2257, tt_acc=0.9220|exp004|colab対応。|
 
 ## 実装説明
 
