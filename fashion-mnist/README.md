@@ -11,6 +11,7 @@
 |exp005|tr_loss=0.1701, tr_acc=0.9366<br>vd_loss=0.2045, vd_acc=0.9251<br>tt_loss=0.2262, tt_acc=0.9181|exp004|colab対応。|
 |exp006|tr_loss=0.1048, tr_acc=0.9615<br>vd_loss=0.2021, vd_acc=0.9322<br>tt_loss=0.2086, tt_acc=0.9266|exp005|data augmentationでzoom_rangeを有効化|
 |exp007|tr_loss=0.1224, tr_acc=0.9591<br>vd_loss=0.1897, vd_acc=0.9348<br>tt_loss=0.2024, tt_acc=0.9328|exp006|mixup|
+|exp008|tr_loss=0.1038, tr_acc=0.9652<br>vd_loss=0.2006, vd_acc=0.9316<br>tt_loss=0.2082, tt_acc=0.9279|exp007|random erase|
 
 ## 実装説明
 
