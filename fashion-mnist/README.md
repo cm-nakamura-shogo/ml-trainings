@@ -70,11 +70,19 @@
 
 - `ImageDataGenerator`に未実装であったため、継承して実装。
 
+### exp008-random-erase
+
+- データ拡張としてrandom-eraseを導入した。
+- 再現性に悩まされており、改善には至っていない。
+
 ## 考察メモと改善案
 
 - Data Augmentation
   - ちょっと試しながら効果があるやつを見極めたい。
   - 小さいので大胆に振る必要はないし、反転などが必要か微妙なところ。
+
+- kernel regularizer
+  - 過学習気味なので、L2正則化してみる。
 
 - Batch Normalizationの再検証
   - 本来は効果があるはずなのだが
